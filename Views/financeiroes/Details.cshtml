@@ -1,0 +1,54 @@
+﻿@model WebApplication1.Models.financeiro
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Financeiro</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medico)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.valor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.valor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Convenio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Convenio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desconto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desconto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.FinancID">Editar</a> |
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>

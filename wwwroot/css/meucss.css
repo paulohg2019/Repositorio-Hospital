@@ -1,0 +1,40 @@
+﻿*
+body {
+    background-color: Lavender;
+    color: black;  
+
+}
+footer {
+    background-color: white;
+
+}
+.pesquisar { /*mudança na largura + borda + cor da borda + espaçamento entre elas*/
+    width: 75%;
+    padding: 10px 8px;
+    margin: 5px 0px;
+    border: 2px solid Gainsboro;
+    border-radius: 7px;
+    box-sizing: content-box;
+}
+.pesquisar2 {
+    width: 20%;
+    padding: 10px 8px;
+    margin: 5px 0px;
+    border: 2px solid Gainsboro;
+    border-radius: 7px;
+    box-sizing: content-box;
+}
+#h1 {
+    background-color: #d4d4f7;
+    padding: 5%;
+    border-radius: 7px;
+    box-sizing: content-box;
+}
+.text-center{
+    padding-top:25%;
+/*}
+#paciente, #exame, #funcionario, #financa, #despesa, #convenio {
+ display: none;*/
+
+
+}

@@ -1,0 +1,73 @@
+﻿@model WebApplication1.Models.despesas
+
+@{
+    ViewData["Title"] = "Detalhes";
+
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Despesas</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Agua)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Agua)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Luz)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Luz)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Internet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Internet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pagamentos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pagamentos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Materiais)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Materiais)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.DespID">Editar</a> |
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>

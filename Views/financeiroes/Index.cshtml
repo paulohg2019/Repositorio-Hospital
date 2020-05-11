@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebApplication1.Models.financeiro>
+
+@{
+    ViewData["Title"] = "Registro Financeiro";
+}
+
+    <h1>Registro Financeiro</h1>
+
+    <p>
+        <a class="btn btn-primary" asp-action="Create">Criar novo</a>
+    </p>
+
+<form asp-controller="financeiro" asp-action="Index" method="get">
+    <p>
+        <input class="pesquisar" placeholder="Pesquisar Paciente:" type="text" name="SearchString">
+        <input class="pesquisar2" type="submit" value="Buscar" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Convenio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desconto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Convenio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desconto)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.FinancID">Editar</a>
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.FinancID">Detalhes</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.FinancID">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

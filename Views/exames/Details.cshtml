@@ -1,0 +1,48 @@
+﻿@model WebApplication1.Models.exames
+
+@{
+    ViewData["Title"] = "Datalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Exame</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExameName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExameName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeMedico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomeMedico)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NomePaciente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NomePaciente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Hora)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Hora)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.ExameID">Editar</a> |
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>
